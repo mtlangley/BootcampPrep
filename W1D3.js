@@ -156,21 +156,28 @@
 //         return true
 //     }
 // }
-function isPrime(number) {
-    if (number < 2) {
-        return false
-    }
-    for (let i = 2; i < number; i++) {
-        if (number % i === 0) {
-            return false
-        }
-    }
-    return true
-}
+// function isPrime(number) {
+//     if (number < 2) {
+//         return false
+//     }
+//     for (let i = 2; i < number; i++) {
+//         if (number % i === 0) {
+//             return false
+//         }
+//     }
+//     return true
+// }
 
-console.log(isPrime(2))
-console.log(isPrime(10))
-console.log(isPrime(11))
-console.log(isPrime(9))
-console.log(isPrime(2017))
-console.log(isPrime(1))
+// console.log(isPrime(2))
+// console.log(isPrime(10))
+// console.log(isPrime(11))
+// console.log(isPrime(9))
+// console.log(isPrime(2017))
+// console.log(isPrime(1))
+
+function printForwards(start, end) {
+    for (let counter = start; counter <= end; counter++) {
+        console.log(counter)
+    }
+}
+printForwards(4, 11)
