@@ -141,10 +141,10 @@
 // Otherwise, false. Assume `number` is a positive integer.
 
 function isPrime(number) {
-    for (let i = 0; i < number; i++) {
+    for (let i = 2; i < number; i++) {
         if (number % i === 0) {
             return true
-        } else if {
+        } else {
             continue
         }
 
