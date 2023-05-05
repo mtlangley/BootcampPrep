@@ -175,9 +175,11 @@
 // console.log(isPrime(2017))
 // console.log(isPrime(1))
 
-function printForwards(start, end) {
-    for (let counter = start; counter <= end; counter++) {
-        console.log(counter)
-    }
-}
-printForwards(4, 11)
+// function printForwards(start, end) {
+//     for (let counter = start; counter <= end; counter++) {
+//         console.log(counter)
+//     }
+// }
+// printForwards(4, 11)
+
+
