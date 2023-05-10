@@ -16,28 +16,43 @@
 // let arr2 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41]
 // console.log(binarySearch(arr2, 37))
 // console.log(binarySearch(arr2, 17))
-// mergeSort
 
-const mergeSort = arr => {
+// mergeSort algorithm
+
+// const mergeSort = arr => {
+//     if (arr.length <= 1) return arr
+//     const mid = Math.floor(arr.length / 2)
+//     const left = mergeSort(arr.slice(0, mid))
+//     const right = mergeSort(arr.slice(mid))
+//     return merge(left, right)
+// }
+
+// const merge = (left, right) => {
+//     const merged = []
+
+//     while (left.length && right.length) {
+//         if (left[0] < right[0]) {
+//             merged.push(left.shift())
+//         } else {
+//             merged.push(right.shift())
+//         }
+//     }
+//     return merged.concat(left, right)
+// }
+
+// const nums = [7, 4, 2, 0, 1, 3, 5, 6]
+// console.log(mergeSort(nums));
+
+// quickSort algorithm
+const quickSort = arr => {
     if (arr.length <= 1) return arr
-    const mid = Math.floor(arr.length / 2)
-    const left = mergeSort(arr.slice(0, mid))
-    const right = mergeSort(arr.slice(mid))
-    return merge(left, right)
+    const pivot = arr.shift()
+    const left = quickSort(arr.filter(ele => ele <= pivot))
+    const right = quickSort(arr.filter(ele => ele > pivot))
+    return left.concat([pivot], right)
 }
+const nums = [7, 1, 2, 4, 0, 3, 6, 5]
 
-const merge = (left, right) => {
-    const merged = []
+console.log(quickSort(nums))
 
-    while (left.length && right.length) {
-        if (left[0] < right[0]) {
-            merged.push(left.shift())
-        } else {
-            merged.push(right.shift())
-        }
-    }
-    return merged.concat(left, right)
-}
-
-const nums = [7, 4, 2, 0, 1, 3, 5, 6]
-console.log(mergeSort(nums));
+[7, 1, 2, 4, 0, 3, 6, 5].filter(ele => ele <= 7)
