@@ -107,18 +107,18 @@
 // Write a function `maxValue(array)` that returns the largest value in `array`.
 // Assume `array` is an array of numbers.
 
-function maxValue(array) {
-    if (array.length === 0) {
-        return null
-    }
-    let max = array[0]
-    for (i = 0; i < array.length; i++) {
-        if (array[i] > max) {
-            max = array[i]
-        }
-    }
-    return max
-}
+// function maxValue(array) {
+//     if (array.length === 0) {
+//         return null
+//     }
+//     let max = array[0]
+//     for (i = 0; i < array.length; i++) {
+//         if (array[i] > max) {
+//             max = array[i]
+//         }
+//     }
+//     return max
+// }
 // maxValue([12, 6, 43, 2]); // => 43
 // maxValue([]); // => null
 // maxValue([-4, -10, 0.43]); // => 0.43

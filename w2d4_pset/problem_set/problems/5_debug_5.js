@@ -19,6 +19,6 @@ function fizzBuzz(max) {
 
   return array;
 }
-
+console.log(fizzBuzz(19)) //=> [3, 5, 6, 9, 10, 12, 18]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = fizzBuzz;

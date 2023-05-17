@@ -39,11 +39,13 @@ titleize("shall we dance?", ["dance"])
 function removePunctuation(word) {
     let punctuation = [";", "!", ".", "?", ",", "-"]
     let newStr = ''
+
     for (let i = 0; i < word.length; i++) {
         if (punctuation.indexOf(word[i]) === -1) {
             newStr += word[i]
         }
     }
+
     return newStr
 }
 
@@ -57,25 +59,33 @@ function isStopWord(word, stopWords) {
         }
     }
 }
-console.log(isStopWord("AND", ["and"]))
+
 function titleize(title, stopWords) {
     let words = title.split(' ')
     let newArr = []
+
     for (let i = 0; i < words.length; i++) {
         let ele = words[i]
-        let temp = removePunctuation(ele)
-        if (isStopWord(temp, stopWords)) {
+        if (isStopWord(ele, stopWords)) {
             newArr.push(ele.toLowerCase())
         } else {
-            let sub = ''
-            for (let i = 0; i < ele.length; i++) {
-                sub = ele[0].toUpperCase() + ele.slice(1).toLowerCase()
-            }
-            newArr.push(sub)
+            newArr.push(ele[0].toUpperCase() + ele.slice(1).toLowerCase())
         }
     }
+
     return newArr.join(' ')
 }
 
+console.log(titleize("forest gump, the runner", ["the"]))
+// => "Forest Gump, the Runner"
+
+console.log(titleize("MASTER AND COMMANDER", ["and"]))
+// => "Master and Commander"
+
+console.log(titleize("i LOVE; lover of mine", ["love", "of"]))
+// => "I love; Lover of Mine"
+
+console.log(titleize("shall we dance?", ["dance"]))
+// => "Shall We dance?"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = titleize;

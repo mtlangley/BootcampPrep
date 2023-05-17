@@ -15,7 +15,6 @@ function multiples(max, num){
   }
   return arr
 }
-console.log(multiples(10, 2)) //=> [ 2, 4, 6, 8 ]
-console.log(multiples(15, 3)) //=> [ 3, 6, 9, 12 ]
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = multiples;

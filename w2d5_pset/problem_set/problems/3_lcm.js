@@ -22,9 +22,6 @@ function lcm(num1, num2) {
     }
     return sum
 }
-console.log(lcm(2, 3)); // => 6
-console.log(lcm(6, 10)); // => 30
-console.log(lcm(24, 26)); // => 312
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = lcm;

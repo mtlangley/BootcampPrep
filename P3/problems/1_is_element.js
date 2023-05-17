@@ -15,8 +15,6 @@ isElement(["a", "b", "c"], "d") => false
 function isElement(array, ele){
   return array.includes(ele)
 }
-console.log(isElement([1,2,3,4,5], 5)) //=> true
-console.log(isElement(["a", "b", "c"], "a")) //=> true
-console.log(isElement(["a", "b", "c"], "d")) //=> false
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = isElement;
