@@ -44,15 +44,36 @@
 // console.log(mergeSort(nums));
 
 // quickSort algorithm
-const quickSort = arr => {
-    if (arr.length <= 1) return arr
-    const pivot = arr.shift()
-    const left = quickSort(arr.filter(ele => ele <= pivot))
-    const right = quickSort(arr.filter(ele => ele > pivot))
-    return left.concat([pivot], right)
+// const quickSort = arr => {
+//     if (arr.length <= 1) return arr
+//     const pivot = arr.shift()
+//     const left = quickSort(arr.filter(ele => ele <= pivot))
+//     const right = quickSort(arr.filter(ele => ele > pivot))
+//     return left.concat([pivot], right)
+// }
+// const nums = [7, 1, 2, 4, 0, 3, 6, 5]
+
+// console.log(quickSort(nums))
+
+// [7, 1, 2, 4, 0, 3, 6, 5].filter(ele => ele <= 7)
+
+const bubbleSort = nums => {
+    let sorted = false;
+    
+    while (!sorted) {
+        sorted = true;
+
+        for (let i = 0; i < nums.length - 1; i += 1) {
+            if (nums[i] > nums[i + 1]) {
+                [nums[i], nums[i + 1]] = [nums[i + 1], nums [i]];
+                sorted = false;
+            }
+        }
+    }
+    return nums;
 }
-const nums = [7, 1, 2, 4, 0, 3, 6, 5]
 
-console.log(quickSort(nums))
 
-[7, 1, 2, 4, 0, 3, 6, 5].filter(ele => ele <= 7)
+array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+console.log(bubbleSort(array))

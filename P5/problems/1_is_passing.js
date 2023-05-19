@@ -26,7 +26,21 @@ isPassing(assessments2) => false
 *******************************************************************************/
 
 function isPassing(assessments) {
-  // your code here...
+  let tests = 0
+  let total = 0
+
+  for ( let i = 0; i < assessments.length; i++) {
+    tests++
+    total += assessments[i].score
+  }
+
+  let avg = total / tests
+  
+  if (avg >= 70) {
+    return true
+  } else {
+    return false
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
